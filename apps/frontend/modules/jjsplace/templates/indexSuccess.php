@@ -1,0 +1,1 @@
+<?php include_partial("global/diningview", array('foods' => $_SESSION['jjsplace'], 'hall' => "JJ's Place")) ?>

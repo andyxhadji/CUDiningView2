@@ -1,0 +1,25 @@
+sfPropelBootstrapThemePlugin
+=========================
+Beta:
+
+This is a twitter bootstrap theme for the symfony 1.4 admin generator for propel.
+
+Installation:
+------------
+
+
+
+Features
+--------
+
+* a theme that integrates Twitter Bootstrap for symfony admin generator (propel)
+
+Using
+-----
+
+Twitter Bootstrap version 2.1.0, jquery 1.8.1 and symfony 1.4
+
+Contributors
+------------
+
+* Luciano Coggiola <tanoinc@gmail.com>
