@@ -1,0 +1,15 @@
+generator:
+  class: sfPropelBoostrapGenerator
+  param:
+##CONFIG##
+
+    config:
+      template:
+        span: 12
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
