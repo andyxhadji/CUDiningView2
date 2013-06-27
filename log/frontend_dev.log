@@ -17426,3 +17426,115 @@ Jun 26 14:20:18 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1
 Jun 26 14:20:18 symfony [info] {sfWebDebugLogger} Partial "global/_header" 4.00 ms (1)
 Jun 26 14:20:18 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.60 ms (1)
 Jun 26 14:20:18 symfony [info] {sfWebResponse} Send content (70212 o)
+Jun 26 14:57:31 symfony [info] {sfPatternRouting} Match route "ferris" (/ferris.:sf_format) for /ferris with parameters array (  'module' => 'ferris',  'action' => 'index',  'sf_format' => 'html',)
+Jun 26 14:57:31 symfony [info] {myUser} Automatic user logout due to timeout
+Jun 26 14:57:31 symfony [info] {myUser} User is not authenticated
+Jun 26 14:57:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 26 14:57:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 26 14:57:31 symfony [info] {ferrisActions} Call "ferrisActions->executeIndex()"
+Jun 26 14:57:32 symfony [debug] {sfPropelLogger} time:  0.117 sec | slow: YES | mem:   13.0 MB | mempeak:   13.0 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.FER=1
+Jun 26 14:57:32 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/ferris/templates/indexSuccess.php"
+Jun 26 14:57:32 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Jun 26 14:57:32 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/CUDV/lib/vendor/symfony/lib/escaper/sfOutputEscaperIteratorDecorator.class.php on line 124 (Undefined offset:  0)
+Jun 26 14:57:32 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:32 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:32 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Jun 26 14:57:32 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Jun 26 14:57:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 26 14:57:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Configuration 14.32 ms (10)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Factories 27.06 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Action "ferris/index" 980.55 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} View "Success" for "ferris/index" 16.44 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1.65 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.25 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.27 ms (1)
+Jun 26 14:57:32 symfony [info] {sfWebResponse} Send content (73746 o)
+Jun 26 14:57:34 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Jun 26 14:57:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 26 14:57:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 26 14:57:34 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Jun 26 14:57:34 symfony [debug] {sfPropelLogger} time:  0.111 sec | slow: YES | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JAY=1
+Jun 26 14:57:34 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/johnjay/templates/indexSuccess.php"
+Jun 26 14:57:34 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Jun 26 14:57:34 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/CUDV/lib/vendor/symfony/lib/escaper/sfOutputEscaperIteratorDecorator.class.php on line 124 (Undefined offset:  0)
+Jun 26 14:57:34 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:34 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:34 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Jun 26 14:57:34 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Jun 26 14:57:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 26 14:57:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Configuration 0.74 ms (9)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Factories 14.15 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 504.17 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} View "Success" for "johnjay/index" 18.18 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1.65 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.92 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.66 ms (1)
+Jun 26 14:57:34 symfony [info] {sfWebResponse} Send content (70226 o)
+Jun 26 14:57:36 symfony [info] {sfPatternRouting} Match route "ferris" (/ferris.:sf_format) for /ferris with parameters array (  'module' => 'ferris',  'action' => 'index',  'sf_format' => 'html',)
+Jun 26 14:57:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 26 14:57:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 26 14:57:36 symfony [info] {ferrisActions} Call "ferrisActions->executeIndex()"
+Jun 26 14:57:37 symfony [debug] {sfPropelLogger} time:  0.701 sec | slow: YES | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.FER=1
+Jun 26 14:57:37 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/ferris/templates/indexSuccess.php"
+Jun 26 14:57:37 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Jun 26 14:57:37 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/CUDV/lib/vendor/symfony/lib/escaper/sfOutputEscaperIteratorDecorator.class.php on line 124 (Undefined offset:  0)
+Jun 26 14:57:37 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:37 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:57:37 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Jun 26 14:57:37 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Jun 26 14:57:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 26 14:57:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Configuration 0.76 ms (9)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Factories 14.02 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Action "ferris/index" 1148.00 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} View "Success" for "ferris/index" 9.25 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 0.85 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Partial "global/_header" 2.14 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.34 ms (1)
+Jun 26 14:57:37 symfony [info] {sfWebResponse} Send content (70213 o)
+Jun 26 14:59:12 symfony [info] {sfPatternRouting} Match route "ferris" (/ferris.:sf_format) for /ferris with parameters array (  'module' => 'ferris',  'action' => 'index',  'sf_format' => 'html',)
+Jun 26 14:59:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 26 14:59:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 26 14:59:12 symfony [info] {ferrisActions} Call "ferrisActions->executeIndex()"
+Jun 26 14:59:12 symfony [debug] {sfPropelLogger} time:  0.150 sec | slow: YES | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.FER=1
+Jun 26 14:59:12 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/ferris/templates/indexSuccess.php"
+Jun 26 14:59:12 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Jun 26 14:59:12 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/CUDV/lib/vendor/symfony/lib/escaper/sfOutputEscaperIteratorDecorator.class.php on line 124 (Undefined offset:  0)
+Jun 26 14:59:12 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:59:12 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:59:12 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Jun 26 14:59:12 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Jun 26 14:59:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 26 14:59:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Configuration 0.77 ms (9)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Factories 15.23 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Action "ferris/index" 551.18 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} View "Success" for "ferris/index" 16.86 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1.62 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.84 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.24 ms (1)
+Jun 26 14:59:12 symfony [info] {sfWebResponse} Send content (70211 o)
+Jun 26 14:59:14 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Jun 26 14:59:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 26 14:59:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 26 14:59:14 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Jun 26 14:59:14 symfony [debug] {sfPropelLogger} time:  0.100 sec | slow:  NO | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JAY=1
+Jun 26 14:59:14 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/johnjay/templates/indexSuccess.php"
+Jun 26 14:59:14 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Jun 26 14:59:14 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/CUDV/lib/vendor/symfony/lib/escaper/sfOutputEscaperIteratorDecorator.class.php on line 124 (Undefined offset:  0)
+Jun 26 14:59:14 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:59:14 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Jun 26 14:59:14 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Jun 26 14:59:14 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Jun 26 14:59:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 26 14:59:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Configuration 0.83 ms (9)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Factories 14.86 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 469.59 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} View "Success" for "johnjay/index" 17.81 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1.63 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Partial "global/_header" 4.03 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.70 ms (1)
+Jun 26 14:59:14 symfony [info] {sfWebResponse} Send content (70206 o)
