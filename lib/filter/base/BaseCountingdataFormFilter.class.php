@@ -3,7 +3,7 @@
 /**
  * Countingdata filter form base class.
  *
- * @package    CUDV
+ * @package    symfony
  * @subpackage filter
  * @author     Your name here
  */

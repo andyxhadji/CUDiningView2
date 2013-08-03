@@ -11,10 +11,27 @@ class dininghallActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    /*$this->jayNutrition = nutritionQuery::create()->filterByCURRENT(1)->filterByJAY(1)->find();
-    $this->jjpNutrition = nutritionQuery::create()->filterByCURRENT(1)->filterByJJP(1)->find();
-    $this->ferNutrition = nutritionQuery::create()->filterByCURRENT(1)->filterByFER(1)->find();
-  */
+
+    if (!$_SESSION['facebook'])
+    {
+      $_SESSION['facebook'] = new Facebook(array(
+        'appId'  => '456852741047731',
+        'secret' => 'd393063ed740476afcaf29c30eee14b8',
+      ));
+    }
+    if ($_SESSION['facebook']->getUser())
+    {
+      $me = $_SESSION['facebook']->api('/me');
+      $userId = $_SESSION['facebook']->getUser();
+      if (!UserQuery::create()->filterByUserId($userId)->count())
+      {
+        $user = new User();
+        $user->setUserId($userId);
+        $user->setName($me['name']);
+        $user->setGender($me['gender']);
+        $user->save();
+      }
+    }
   }
 
   public function executeNew(sfWebRequest $request)

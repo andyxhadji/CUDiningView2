@@ -10,7 +10,33 @@
 
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '<?php echo $_SESSION['facebook']->getAppID() ?>',
+          cookie: true,
+          channelUrl: '//WWW.LOCALHOST:8080/channel.html',
+          xfbml: true,
+          oauth: true
+        });
+        FB.Event.subscribe('auth.login', function(response) {
+        });
+        FB.Event.subscribe('auth.logout', function(response) {
+          window.location.reload();
+        });
+      };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <?php include_partial('global/header') ?>
+
     <?php echo $sf_content ?>
     <?php include_partial('global/footer') ?>
   </body>
