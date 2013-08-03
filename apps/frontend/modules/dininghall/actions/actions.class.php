@@ -19,10 +19,11 @@ class dininghallActions extends sfActions
         'secret' => 'd393063ed740476afcaf29c30eee14b8',
       ));
     }
-    if ($_SESSION['facebook']->getUser())
+    $arr = $_SESSION['facebook']->getSignedRequest();
+    $userId = $arr['user_id'];
+    if ($userId)
     {
       $me = $_SESSION['facebook']->api('/me');
-      $userId = $_SESSION['facebook']->getUser();
       if (!UserQuery::create()->filterByUserId($userId)->count())
       {
         $user = new User();
