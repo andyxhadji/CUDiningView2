@@ -46,3 +46,9 @@ propel:
     TTIME: { phpName: Ttime, type: VARCHAR, size: '30', required: false }
     MTYPE: { phpName: Mtype, type: VARCHAR, size: '20', required: false }
     ENTR: { phpName: Entr, type: INTEGER, required: false }
+  user:
+    User: { phpName: UserId, type: VARCHAR, size: '50', required: true }
+    Name: { phpName: Name, type: VARCHAR, size: '50', required: false }
+    Gender: { phpName: Gender, type: VARCHAR, size: '10', required: false }
+    Food: { phpName: Food, type: VARCHAR, size: '50', required: false }
+

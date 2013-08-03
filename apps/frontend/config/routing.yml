@@ -53,6 +53,8 @@ johnjay1:
 ferris1:
   url: /ferris
   param: { module: johnjay, action: index }
+
+
 # generic rules
 # please, remove them by adding more specific rules
 #default_index:

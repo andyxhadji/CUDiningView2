@@ -5,7 +5,7 @@
  *
  * @method Nutrition getObject() Returns the current form's model object
  *
- * @package    CUDV
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
  */
