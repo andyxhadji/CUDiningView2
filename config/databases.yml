@@ -14,8 +14,8 @@ all:
       classname: PropelPDO
 <<<<<<< HEAD
       dsn: 'mysql:dbname=CUDV;host=localhost'
-      username: root
-      password: papermario
+      username: 
+      password: 
 =======
       dsn: 
       username: 
