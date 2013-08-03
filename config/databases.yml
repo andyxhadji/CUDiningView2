@@ -12,9 +12,15 @@ all:
     class: sfPropelDatabase
     param:
       classname: PropelPDO
+<<<<<<< HEAD
       dsn: 'mysql:dbname=CUDV;host=localhost'
       username: root
       password: papermario
+=======
+      dsn: 
+      username: 
+      password: 
+>>>>>>> 4caad318822d1e9b3f04e0480a026f0562aafd60
       encoding: utf8
       persistent: true
       pooling: true
