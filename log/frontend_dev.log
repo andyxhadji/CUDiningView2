@@ -33912,3 +33912,107 @@ Aug 03 15:10:18 symfony [info] {sfWebDebugLogger} Partial "dininghall/_home" 0.4
 Aug 03 15:10:18 symfony [info] {sfWebDebugLogger} Partial "global/_header" 2.66 ms (1)
 Aug 03 15:10:18 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.42 ms (1)
 Aug 03 15:10:18 symfony [info] {sfWebResponse} Send content (83340 o)
+Aug 03 17:24:48 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Aug 03 17:24:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 03 17:24:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 03 17:24:48 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Aug 03 17:24:48 symfony [err] {PropelException} Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'cudining_root'@'localhost' (using password: YES)]
+Aug 03 17:24:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Aug 03 17:24:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 03 17:24:48 symfony [info] {sfWebDebugLogger} Configuration 0.89 ms (8)
+Aug 03 17:24:48 symfony [info] {sfWebDebugLogger} Factories 17.19 ms (1)
+Aug 03 17:24:48 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 33.07 ms (1)
+Aug 03 17:28:21 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Aug 03 17:28:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 03 17:28:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 03 17:28:21 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Aug 03 17:28:21 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   13.3 MB | mempeak:   13.3 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JAY=1
+Aug 03 17:28:21 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/johnjay/templates/indexSuccess.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:21 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:21 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Aug 03 17:28:21 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Aug 03 17:28:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 03 17:28:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Configuration 5.13 ms (10)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Factories 24.56 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 11.98 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} View "Success" for "johnjay/index" 9.67 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 3.23 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 2.13 ms (5)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Partial "global/_header" 1.64 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.25 ms (1)
+Aug 03 17:28:21 symfony [info] {sfWebResponse} Send content (113563 o)
+Aug 03 17:28:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'dininghall',  'action' => 'index',)
+Aug 03 17:28:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 03 17:28:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 03 17:28:22 symfony [info] {dininghallActions} Call "dininghallActions->executeIndex()"
+Aug 03 17:28:22 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/dininghall/templates/indexSuccess.php"
+Aug 03 17:28:22 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/modules/dininghall/templates/_home.php"
+Aug 03 17:28:22 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:22 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:22 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Aug 03 17:28:22 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Aug 03 17:28:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 03 17:28:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Configuration 0.51 ms (9)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Factories 15.28 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Action "dininghall/index" 0.11 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} View "Success" for "dininghall/index" 6.40 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Partial "dininghall/_home" 0.36 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Partial "global/_header" 1.59 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.25 ms (1)
+Aug 03 17:28:22 symfony [info] {sfWebResponse} Send content (59426 o)
+Aug 03 17:28:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'dininghall',  'action' => 'index',)
+Aug 03 17:28:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 03 17:28:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 03 17:28:30 symfony [info] {dininghallActions} Call "dininghallActions->executeIndex()"
+Aug 03 17:28:30 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/dininghall/templates/indexSuccess.php"
+Aug 03 17:28:30 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/modules/dininghall/templates/_home.php"
+Aug 03 17:28:30 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:30 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:30 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Aug 03 17:28:30 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Aug 03 17:28:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 03 17:28:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Configuration 0.50 ms (9)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Factories 14.95 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Action "dininghall/index" 0.13 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} View "Success" for "dininghall/index" 6.08 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Partial "dininghall/_home" 0.27 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Partial "global/_header" 1.57 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.23 ms (1)
+Aug 03 17:28:30 symfony [info] {sfWebResponse} Send content (59351 o)
+Aug 03 17:28:33 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Aug 03 17:28:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 03 17:28:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 03 17:28:33 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Aug 03 17:28:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   12.3 MB | mempeak:   12.3 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JAY=1
+Aug 03 17:28:33 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/modules/johnjay/templates/indexSuccess.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_diningview.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_foodview.php"
+Aug 03 17:28:33 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:33 symfony [info] {sfPHPView} Render "/home/sfprojects/CUDV/apps/frontend/templates/layout.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_header.php"
+Aug 03 17:28:33 symfony [info] {sfPartialView} Render "/home/sfprojects/CUDV/apps/frontend/templates/_footer.php"
+Aug 03 17:28:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 03 17:28:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Configuration 0.75 ms (9)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Factories 14.99 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 11.75 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} View "Success" for "johnjay/index" 12.59 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 3.07 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 1.99 ms (5)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Partial "global/_header" 1.65 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.27 ms (1)
+Aug 03 17:28:33 symfony [info] {sfWebResponse} Send content (113599 o)
