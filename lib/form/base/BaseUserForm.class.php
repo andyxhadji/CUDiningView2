@@ -18,6 +18,7 @@ abstract class BaseUserForm extends BaseFormPropel
       'Name'   => new sfWidgetFormInputText(),
       'Gender' => new sfWidgetFormInputText(),
       'Food'   => new sfWidgetFormInputText(),
+      'Visits' => new sfWidgetFormInputText(),
       'id'     => new sfWidgetFormInputHidden(),
     ));
 
@@ -26,6 +27,7 @@ abstract class BaseUserForm extends BaseFormPropel
       'Name'   => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'Gender' => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'Food'   => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'Visits' => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647, 'required' => false)),
       'id'     => new sfValidatorChoice(array('choices' => array($this->getObject()->getId()), 'empty_value' => $this->getObject()->getId(), 'required' => false)),
     ));
 
