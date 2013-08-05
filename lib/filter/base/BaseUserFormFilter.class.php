@@ -16,6 +16,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterPropel
       'Name'   => new sfWidgetFormFilterInput(),
       'Gender' => new sfWidgetFormFilterInput(),
       'Food'   => new sfWidgetFormFilterInput(),
+      'Visits' => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -23,6 +24,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterPropel
       'Name'   => new sfValidatorPass(array('required' => false)),
       'Gender' => new sfValidatorPass(array('required' => false)),
       'Food'   => new sfValidatorPass(array('required' => false)),
+      'Visits' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('user_filters[%s]');
@@ -44,6 +46,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterPropel
       'Name'   => 'Text',
       'Gender' => 'Text',
       'Food'   => 'Text',
+      'Visits' => 'Number',
       'id'     => 'Number',
     );
   }

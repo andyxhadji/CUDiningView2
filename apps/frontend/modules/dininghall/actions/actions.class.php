@@ -24,12 +24,19 @@ class dininghallActions extends sfActions
     if ($userId)
     {
       $me = $_SESSION['facebook']->api('/me');
-      if (!UserQuery::create()->filterByUserId($userId)->count())
+      $user = UserQuery::create()->filterByUserId($userId)->find();
+      if (!$user)
       {
         $user = new User();
         $user->setUserId($userId);
         $user->setName($me['name']);
         $user->setGender($me['gender']);
+        $user->save();
+      }
+      else
+      {
+        $visits = $user->getVisits();
+        $user->setVisits($visits+1);
         $user->save();
       }
     }
