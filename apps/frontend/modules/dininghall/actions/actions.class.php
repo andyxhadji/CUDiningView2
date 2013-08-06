@@ -35,9 +35,9 @@ class dininghallActions extends sfActions
       }
       else
       {
-        $visits = $user->getVisits();
-        $user->setVisits($visits+1);
-        $user->save();
+        $visits = $user[0]->getVisits();
+        $user[0]->setVisits($visits+1);
+        $user[0]->save();
       }
     }
   }
