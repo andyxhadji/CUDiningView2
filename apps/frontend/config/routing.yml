@@ -61,6 +61,6 @@ ferris1:
 #  url:   /:module
 #  param: { action: index }
 
-#default:
-#  url:   /:module/:action/*
+default:
+  url:   /:module/:action/*
 
