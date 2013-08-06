@@ -42,6 +42,43 @@ class dininghallActions extends sfActions
     }
   }
 
+  public function executeSubscribe(sfWebRequest $request)
+  {
+    $arr = $_SESSION['facebook']->getSignedRequest();
+    $userId = $arr['user_id'];
+    $user = UserQuery::create()->filterByUserId($userId)->find();
+    $foods = $user[0]->getFood();
+    $foods = unserialize($foods);
+    $counter = 0;
+    $id = $_GET['id'];
+    $check = 0;
+    while ($counter < count($foods))
+    {
+      if ((string)$foods[$counter] == (string)$id)
+      {
+        $position = $counter;
+        $check = 1;
+      }
+      $counter = $counter + 1;
+    }
+    if ($check)
+    {
+      unset($foods[$position]);
+      $foods = array_values($foods);
+      $serialized = serialize($foods);
+      $user[0]->setFood($serialized);
+      $user[0]->save();
+    }
+    else
+    {
+      $foods[] = $id;
+      $serialized = serialize($foods);
+      $user[0]->setFood($serialized);
+      $user[0]->save();
+
+    }
+  }
+
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new nutritionForm();

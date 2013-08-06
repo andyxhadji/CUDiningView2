@@ -83,10 +83,20 @@ xmlhttp.send();
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
+
   </div>
       </div>
 
 <?php } ?>
+
+<script type="text/javascript">
+function subscribe(food) {
+    $.get("/dininghall/subscribe?id=" + food);
+    return false;
+}
+
+</script>
 
 </div>
 </div>

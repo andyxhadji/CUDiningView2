@@ -51,5 +51,5 @@ propel:
     Name: { phpName: Name, type: VARCHAR, size: '50', required: false }
     Gender: { phpName: Gender, type: VARCHAR, size: '10', required: false }
     Food: { phpName: Food, type: VARCHAR, size: '50', required: false }
-    Visits: { phpName: Visits, type: INTEGER, required: false, default: 0 }
+    Visits: { phpName: Visits, type: INTEGER, size: '1000', required: false, default: 0 }
 
