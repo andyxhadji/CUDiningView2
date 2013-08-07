@@ -11,6 +11,10 @@ class ferrisActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    $arr = $_SESSION['facebook']->getSignedRequest();
+    $userId = $arr['user_id'];
+    $user = UserQuery::create()->filterByUserId($userId)->findOne();
+    $_SESSION['foods'] = unserialize($user->getFood());
     $_SESSION['ferris'] = nutritionQuery::create()->filterByFer(1)->find();
   }
 
