@@ -13,6 +13,7 @@
               <li><?php echo link_to('John Jay', 'johnjay/index') ?></li>
               <li><?php echo link_to('Ferris Booth Commons', 'ferris/index') ?></li>
               <li><?php echo link_to("JJ's Place", 'jjsplace/index') ?></li>
+              <li><?php echo link_to("My Plate", 'myplate/index') ?></li>
               <li><?php echo link_to("Contact", 'contact/index') ?></li>
             </ul>
           </div><!--/.nav-collapse -->
