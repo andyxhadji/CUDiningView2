@@ -41,7 +41,15 @@
       </div>
       </div>
 <?php } else { ?>
-
+<? if ($number == 1): ?>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#all2" data-toggle="tab">All</a></li>
+  <li><a href="#vegetarian2" data-toggle="tab">Vegetarian</a></li>
+  <li><a href="#vegan2" data-toggle="tab">Vegan</a></li>
+  <li><a href="#glutenfree2" data-toggle="tab">Gluten Free</a></li>
+  <li><a href="#locallygrown2" data-toggle="tab">Locally Grown</a></li>
+</ul>
+<? else: ?>
 <ul class="nav nav-tabs">
   <li class="active"><a href="#all" data-toggle="tab">All</a></li>
   <li><a href="#vegetarian" data-toggle="tab">Vegetarian</a></li>
@@ -49,13 +57,21 @@
   <li><a href="#glutenfree" data-toggle="tab">Gluten Free</a></li>
   <li><a href="#locallygrown" data-toggle="tab">Locally Grown</a></li>
 </ul>
-
+<? endif; ?>
 <div class="tab-content">
+  <? if ($number == 1): ?>
+  <div class="tab-pane active" id="all2">
+  <? else: ?>
   <div class="tab-pane active" id="all">
+  <? endif; ?>
     <?php include_partial('global/foodview', array('foods' => $foods, 'type' => 'all')) ?>   
   </div>
+  <? if ($number == 1): ?>
+  <div class="tab-pane" id="vegetarian2">
+  <? else: ?>
+    <div class="tab-pane" id="vegetarian">
+  <? endif; ?>
 
-  <div class="tab-pane" id="vegetarian">
     <?php $vegetarianFoods = array(); ?>
     <?php foreach ($foods as $food) {  ?>
       <?php if ($food->getV() == 1) {
@@ -65,8 +81,11 @@
    <?php } ?>
     <?php include_partial('global/foodview', array('foods' => $vegetarianFoods, 'type' => 'vegetarian')) ?>   
   </div>
-
-  <div class="tab-pane" id="vegan">
+  <? if ($number == 1): ?>
+  <div class="tab-pane" id="vegan2">
+  <? else: ?>
+    <div class="tab-pane" id="vegan">
+  <? endif; ?>
     <?php $veganFoods = array(); ?>
     <?php foreach ($foods as $food) {  ?>
       <?php if ($food->getVN() == 1) {
@@ -77,7 +96,11 @@
     <?php include_partial('global/foodview', array('foods' => $veganFoods, 'type' => 'vegan')) ?>   
   </div>
 
-  <div class="tab-pane" id="glutenfree">
+  <? if ($number == 1): ?>
+  <div class="tab-pane" id="glutenfree2">
+  <? else: ?>
+    <div class="tab-pane" id="glutenfree">
+  <? endif; ?>
     <?php $glutenfreeFoods = array(); ?>
     <?php foreach ($foods as $food) {  ?>
       <?php if ($food->getGF() == 1) {
@@ -87,8 +110,11 @@
    <?php } ?>
     <?php include_partial('global/foodview', array('foods' => $glutenfreeFoods, 'type' => 'glutenfree')) ?>   
   </div>
-
-  <div class="tab-pane" id="locallygrown">
+  <? if ($number == 1): ?>
+  <div class="tab-pane" id="locallygrown2">
+  <? else: ?>
+    <div class="tab-pane" id="locallygrown">
+  <? endif; ?>
     <?php $locallygrownFoods = array(); ?>
     <?php foreach ($foods as $food) {  ?>
       <?php if ($food->getL() == 1) {
