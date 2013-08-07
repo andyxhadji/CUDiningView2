@@ -14,8 +14,10 @@ class johnjayActions extends sfActions
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
     $user = UserQuery::create()->filterByUserId($userId)->findOne();
-    $_SESSION['foods'] = unserialize($user->getFood());
-    $_SESSION['johnjay'] = nutritionQuery::create()->filterByJAY(1)->find();
+    if ($user):
+      $_SESSION['foods'] = unserialize($user->getFood());
+      $_SESSION['johnjay'] = nutritionQuery::create()->filterByJAY(1)->find();
+    endif;
   }
 
   public function executeNew(sfWebRequest $request)

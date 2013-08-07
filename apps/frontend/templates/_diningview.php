@@ -5,6 +5,7 @@
               <h1 class="offset3"><?php echo $hall ?> </h1>
                <div class="span9">
             	 <div class="well">
+                <?php if (!$me): ?>
                 <div class="row-fluid">
                   <div class="span8 offset2">
          			      <div class="progress progress-success">
@@ -19,12 +20,19 @@
                       <strong>Under Construction</strong> Real-time occupancy coming soon! ^ ^ ^
                     </div>
                   </div>
+                  <?php endif; ?>
+
 <?php if(!$foods[0]) { ?>
   <div class="row-fluid">
 <div class="alert alert-info">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4>CU Dining View</h4>
-  CU has not released info for the next meal yet!</div>
+  <? if ($me): ?>
+  You haven't subscribed to any foods yet!
+<? else: ?>
+  CU has not released info for the next meal yet!
+<? endif; ?>
+</div>
   </div>
   </div>
       </div>
