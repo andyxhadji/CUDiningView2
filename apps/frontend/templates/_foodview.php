@@ -83,8 +83,20 @@ xmlhttp.send();
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <?php 
+    $check = 0;
+    foreach $_SESSION['foods'] as $userFood
+    {
+      if ($userFood == $food->getFOODID())
+      {
+        $check = 1;
+      }
+    }
+    if ($check == 1): ?>
+    <button id="food<?php echo $food->getFOODID() ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Unsubscribe</button>
+    <?php else: ?>
     <button id="food<?php echo $food->getFOODID() ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
-
+<?php endif; ?>
   </div>
       </div>
 
