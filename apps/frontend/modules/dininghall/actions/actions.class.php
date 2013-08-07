@@ -12,32 +12,36 @@ class dininghallActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 
-    if (!$_SESSION['facebook'])
-    {
-      $_SESSION['facebook'] = new Facebook(array(
-        'appId'  => '456852741047731',
-        'secret' => 'd393063ed740476afcaf29c30eee14b8',
-      ));
-    }
+
+    $_SESSION['facebook'] = new Facebook(array(
+      'appId'  => '456852741047731',
+      'secret' => 'd393063ed740476afcaf29c30eee14b8',
+    ));
+    
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
-    if ($userId)
+    if ($userId && $_SESSION['facebook']->getUser())
     {
-      $me = $_SESSION['facebook']->api('/me');
-      $user = UserQuery::create()->filterByUserId($userId)->findOne();
-      if (!$user)
+      try
       {
-        $user = new User();
-        $user->setUserId($userId);
-        $user->setName($me['name']);
-        $user->setGender($me['gender']);
-        $user->save();
-      }
-      else
+        $me = $_SESSION['facebook']->api('/me');
+        $user = UserQuery::create()->filterByUserId($userId)->findOne();
+        if (!$user)
+        {
+          $user = new User();
+          $user->setUserId($userId);
+          $user->setName($me['name']);
+          $user->setGender($me['gender']);
+          $user->save();
+        }
+        else
+        {
+          $visits = $user->getVisits();
+          $user->setVisits($visits+1);
+          $user->save();
+        }
+      } catch (FacebookApiException $e) 
       {
-        $visits = $user->getVisits();
-        $user->setVisits($visits+1);
-        $user->save();
       }
     }
   }
