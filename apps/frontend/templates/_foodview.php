@@ -83,7 +83,7 @@ xmlhttp.send();
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
+    <button id="food<?php echo $food->getFOODID() ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
 
   </div>
       </div>
@@ -93,6 +93,14 @@ xmlhttp.send();
 <script type="text/javascript">
 function subscribe(food) {
     $.get("/dininghall/subscribe?id=" + food);
+    if (document.getElementById('food' + food).innerHTML == 'Unsubscribe')
+    {
+      document.getElementById('food' + food).innerHTML = 'Subscribe';
+    }
+    else
+    {
+      document.getElementById('food' + food).innerHTML = 'Unsubscribe';
+    }
     return false;
 }
 
