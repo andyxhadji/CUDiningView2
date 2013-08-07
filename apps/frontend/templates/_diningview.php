@@ -64,7 +64,7 @@
   <? else: ?>
   <div class="tab-pane active" id="all">
   <? endif; ?>
-    <?php include_partial('global/foodview', array('foods' => $foods, 'type' => 'all')) ?>   
+    <?php include_partial('global/foodview', array('foods' => $foods, 'type' => 'all', 'number' => $number)) ?>   
   </div>
   <? if ($number == 1): ?>
   <div class="tab-pane" id="vegetarian2">
@@ -79,7 +79,7 @@
       }
       ?>
    <?php } ?>
-    <?php include_partial('global/foodview', array('foods' => $vegetarianFoods, 'type' => 'vegetarian')) ?>   
+    <?php include_partial('global/foodview', array('foods' => $vegetarianFoods, 'type' => 'vegetarian', 'number' => $number)) ?>   
   </div>
   <? if ($number == 1): ?>
   <div class="tab-pane" id="vegan2">
@@ -93,7 +93,7 @@
       }
       ?>
    <?php } ?>
-    <?php include_partial('global/foodview', array('foods' => $veganFoods, 'type' => 'vegan')) ?>   
+    <?php include_partial('global/foodview', array('foods' => $veganFoods, 'type' => 'vegan', 'number' => $number)) ?>   
   </div>
 
   <? if ($number == 1): ?>
@@ -108,7 +108,7 @@
       }
       ?>
    <?php } ?>
-    <?php include_partial('global/foodview', array('foods' => $glutenfreeFoods, 'type' => 'glutenfree')) ?>   
+    <?php include_partial('global/foodview', array('foods' => $glutenfreeFoods, 'type' => 'glutenfree', 'number' => $number)) ?>   
   </div>
   <? if ($number == 1): ?>
   <div class="tab-pane" id="locallygrown2">
@@ -122,7 +122,7 @@
       }
       ?>
    <?php } ?>
-    <?php include_partial('global/foodview', array('foods' => $locallygrownFoods, 'type' => 'locallygrown')) ?>   
+    <?php include_partial('global/foodview', array('foods' => $locallygrownFoods, 'type' => 'locallygrown', 'number' => $number)) ?>   
   </div>
 
 </div>
