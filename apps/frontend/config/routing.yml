@@ -54,6 +54,9 @@ ferris1:
   url: /ferris
   param: { module: johnjay, action: index }
 
+myplate1:
+  url: /myplate
+  param: { module: myplate, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

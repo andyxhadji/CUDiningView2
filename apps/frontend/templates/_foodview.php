@@ -1,25 +1,4 @@
-<!--<script>
-function subscribe(id)
-{
-if (window.XMLHttpRequest)
-  {// code for real browsers
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for abominations
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.status==200 && xmlhttp.readyState==4)
-    {
-    document.getElementById("subscribeStatus").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","blog.php?id="+id,true);
-xmlhttp.send();
-}
-</script>-->
+
 <div class="container-fluid" style="text-align:center"><div class="row-fluid">
 <?php foreach($foods as $food) { ?>
 
