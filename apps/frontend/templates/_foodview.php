@@ -85,7 +85,7 @@ xmlhttp.send();
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
     <?php 
     $check = 0;
-    foreach $_SESSION['foods'] as $userFood
+    foreach ($_SESSION['foods'] as $userFood)
     {
       if ($userFood == $food->getFOODID())
       {
