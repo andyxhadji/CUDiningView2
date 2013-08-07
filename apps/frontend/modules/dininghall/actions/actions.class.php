@@ -38,6 +38,7 @@ class dininghallActions extends sfActions
         $visits = $user->getVisits();
         $user->setVisits($visits+1);
         $user->save();
+        $_SESSION['foods'] = unserialize($user->getFood());
       }
     }
   }
