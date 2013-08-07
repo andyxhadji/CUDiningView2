@@ -16,8 +16,9 @@ class jjsplaceActions extends sfActions
     $user = UserQuery::create()->filterByUserId($userId)->findOne();
     if ($user):  
       $_SESSION['foods'] = unserialize($user->getFood());
-      $_SESSION['jjsplace'] = nutritionQuery::create()->filterByJJP(1)->find();
     endif;    
+    $_SESSION['jjsplace'] = nutritionQuery::create()->filterByJJP(1)->find();
+
   }
 
   public function executeNew(sfWebRequest $request)

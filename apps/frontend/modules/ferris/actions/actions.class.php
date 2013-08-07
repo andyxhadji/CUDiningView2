@@ -16,8 +16,8 @@ class ferrisActions extends sfActions
     $user = UserQuery::create()->filterByUserId($userId)->findOne();
     if ($user):
       $_SESSION['foods'] = unserialize($user->getFood());
-      $_SESSION['ferris'] = nutritionQuery::create()->filterByFer(1)->find();
     endif;
+    $_SESSION['ferris'] = nutritionQuery::create()->filterByFer(1)->find();
   }
 
   public function executeNew(sfWebRequest $request)
