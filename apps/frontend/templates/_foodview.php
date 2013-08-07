@@ -3,11 +3,11 @@
 <?php foreach($foods as $food) { ?>
 
 
-<a href="#<?php echo $food->getFOODID() ?><?php echo $type ?>" role="button" class="btn" style="width:162px;
+<a href="#<?php echo $food->getFOODID() ?><?php echo $type ?><?php echo $number ?>" role="button" class="btn" style="width:162px;
  margin-left:8px; margin-right:8px; margin-top: 8px"; data-toggle="modal">
  <img src=<?php echo $food->getUrl() ?>><br><?php echo $food->getDish() ?></a>
 
- <div id="<?php echo $food->getFOODID() ?><?php echo $type ?>"
+ <div id="<?php echo $food->getFOODID() ?><?php echo $type ?><?php echo $number ?>"
    class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -72,9 +72,9 @@
       }
     }
     if ($check == 1): ?>
-    <button id="food<?php echo $food->getFOODID() ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Unsubscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn btn-primary" data-loading-text="Hold on...">Unsubscribe</button>
     <?php else: ?>
-    <button id="food<?php echo $food->getFOODID() ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
 <?php endif; ?>
   </div>
       </div>
@@ -82,15 +82,15 @@
 <?php } ?>
 
 <script type="text/javascript">
-function subscribe(food) {
+function subscribe(food, number) {
     $.get("/dininghall/subscribe?id=" + food);
-    if (document.getElementById('food' + food).innerHTML == 'Unsubscribe')
+    if (document.getElementById('food' + food + number).innerHTML == 'Unsubscribe')
     {
-      document.getElementById('food' + food).innerHTML = 'Subscribe';
+      document.getElementById('food' + food + number).innerHTML = 'Subscribe';
     }
     else
     {
-      document.getElementById('food' + food).innerHTML = 'Unsubscribe';
+      document.getElementById('food' + food + number).innerHTML = 'Unsubscribe';
     }
     return false;
 }
