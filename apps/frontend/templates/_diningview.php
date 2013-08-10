@@ -1,8 +1,8 @@
   <div class="tab-pane" id="hall">
       <div class="container-fluid">
         <div class="row-fluid">
+		<h1 style="text-align: center;"><?php echo $hall ?> </h1>
         	<div class="offset2">
-              <h1 class="offset3"><?php echo $hall ?> </h1>
                <div class="span9">
             	 <div class="well">
                 <?php if (!$me): ?>
