@@ -1203,3 +1203,167 @@ Aug 20 17:44:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilt
 Aug 20 17:44:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Aug 20 17:44:11 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
 Aug 20 17:44:11 symfony [notice] {sfWebDebugLogger}  Notice at /home/cudining/CUDV/CUDiningView2/apps/frontend/modules/johnjay/actions/actions.class.php on line 14 (Undefined index: facebook)
+Aug 20 18:39:24 symfony [info] {sfPatternRouting} Match route "myplate1" (/myplate) for /myplate with parameters array (  'module' => 'myplate',  'action' => 'index',)
+Aug 20 18:39:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:24 symfony [info] {myplateActions} Call "myplateActions->executeIndex()"
+Aug 20 18:39:24 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:24 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/myplate/templates/indexSuccess.php"
+Aug 20 18:39:24 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:24 symfony [notice] {sfWebDebugLogger}  Notice at /home/cudining/andy2/lib/vendor/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 107 (Undefined offset: 0)
+Aug 20 18:39:24 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:24 symfony [notice] {sfWebDebugLogger}  Notice at /home/cudining/andy2/lib/vendor/symfony/lib/escaper/sfOutputEscaperArrayDecorator.class.php on line 107 (Undefined offset: 0)
+Aug 20 18:39:24 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:24 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:24 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:24 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Configuration 92.60 ms (9)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Factories 64.84 ms (1)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Action "myplate/index" 18.37 ms (1)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} View "Success" for "myplate/index" 13.73 ms (1)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 1.53 ms (2)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.15 ms (1)
+Aug 20 18:39:24 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.41 ms (1)
+Aug 20 18:39:24 symfony [info] {sfWebResponse} Send content (79354 o)
+Aug 20 18:39:31 symfony [info] {sfPatternRouting} Match route "ferris" (/ferris.:sf_format) for /ferris with parameters array (  'module' => 'ferris',  'action' => 'index',  'sf_format' => 'html',)
+Aug 20 18:39:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:31 symfony [info] {ferrisActions} Call "ferrisActions->executeIndex()"
+Aug 20 18:39:31 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   10.8 MB | mempeak:   10.8 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:31 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   12.0 MB | mempeak:   12.0 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.FER=1
+Aug 20 18:39:31 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/ferris/templates/indexSuccess.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:31 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:31 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:31 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Configuration 10.84 ms (10)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Factories 20.15 ms (1)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Action "ferris/index" 32.15 ms (1)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} View "Success" for "ferris/index" 17.78 ms (1)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 5.52 ms (1)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 3.75 ms (5)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.16 ms (1)
+Aug 20 18:39:31 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.47 ms (1)
+Aug 20 18:39:32 symfony [info] {sfWebResponse} Send content (129694 o)
+Aug 20 18:39:33 symfony [info] {sfPatternRouting} Match route "jjsplace" (/jjsplace.:sf_format) for /jjsplace with parameters array (  'module' => 'jjsplace',  'action' => 'index',  'sf_format' => 'html',)
+Aug 20 18:39:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:33 symfony [info] {jjsplaceActions} Call "jjsplaceActions->executeIndex()"
+Aug 20 18:39:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.5 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   12.3 MB | mempeak:   12.3 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JJP=1
+Aug 20 18:39:33 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/jjsplace/templates/indexSuccess.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:33 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:33 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:33 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Configuration 10.76 ms (10)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Factories 23.85 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Action "jjsplace/index" 21.23 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} View "Success" for "jjsplace/index" 17.74 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 5.78 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 3.93 ms (5)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.05 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.42 ms (1)
+Aug 20 18:39:33 symfony [info] {sfWebResponse} Send content (137946 o)
+Aug 20 18:39:36 symfony [info] {sfPatternRouting} Match route "myplate1" (/myplate) for /myplate with parameters array (  'module' => 'myplate',  'action' => 'index',)
+Aug 20 18:39:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:36 symfony [info] {myplateActions} Call "myplateActions->executeIndex()"
+Aug 20 18:39:36 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   10.5 MB | mempeak:   10.5 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:36 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.5 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.FOOD_ID='22222' LIMIT 1
+Aug 20 18:39:36 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/myplate/templates/indexSuccess.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:36 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:36 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:36 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Configuration 0.84 ms (9)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Factories 24.21 ms (1)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Action "myplate/index" 23.02 ms (1)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} View "Success" for "myplate/index" 19.36 ms (1)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 8.91 ms (2)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 6.18 ms (10)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.07 ms (1)
+Aug 20 18:39:36 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.41 ms (1)
+Aug 20 18:39:36 symfony [info] {sfWebResponse} Send content (162845 o)
+Aug 20 18:39:38 symfony [info] {sfPatternRouting} Match route "johnjay" (/johnjay.:sf_format) for /johnjay with parameters array (  'module' => 'johnjay',  'action' => 'index',  'sf_format' => 'html',)
+Aug 20 18:39:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:38 symfony [info] {johnjayActions} Call "johnjayActions->executeIndex()"
+Aug 20 18:39:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.5 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   12.3 MB | mempeak:   12.3 MB | memdelta:      0.0 B | SELECT nutrition.FOOD_ID, nutrition.CURRENT, nutrition.DISH, nutrition.JAY, nutrition.JJP, nutrition.FER, nutrition.SERVINGSIZE, nutrition.CALORIES, nutrition.TOTALFAT, nutrition.CHOLESTEROL, nutrition.SATURATEDFAT, nutrition.PROTEIN, nutrition.CARBOHYDRATE, nutrition.FIBER, nutrition.SODIUM, nutrition.SCORE, nutrition.URL, nutrition.V, nutrition.VN, nutrition.GF, nutrition.L FROM `nutrition` WHERE nutrition.JAY=1
+Aug 20 18:39:38 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/johnjay/templates/indexSuccess.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_diningview.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_foodview.php"
+Aug 20 18:39:38 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:38 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:38 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Configuration 10.86 ms (10)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Factories 24.10 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Action "johnjay/index" 21.37 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} View "Success" for "johnjay/index" 17.90 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Partial "global/_diningview" 5.83 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Partial "global/_foodview" 3.99 ms (5)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.08 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.41 ms (1)
+Aug 20 18:39:38 symfony [info] {sfWebResponse} Send content (138054 o)
+Aug 20 18:39:39 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'dininghall',  'action' => 'index',)
+Aug 20 18:39:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 20 18:39:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 20 18:39:39 symfony [info] {dininghallActions} Call "dininghallActions->executeIndex()"
+Aug 20 18:39:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.5 MB | memdelta:      0.0 B | SELECT user.USER, user.NAME, user.GENDER, user.FOOD, user.VISITS, user.ID FROM `user` WHERE user.USER='1457995642' LIMIT 1
+Aug 20 18:39:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.8 MB | mempeak:   11.8 MB | memdelta:      0.0 B | UPDATE `user` SET `VISITS`=34 WHERE user.ID=8
+Aug 20 18:39:40 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/modules/dininghall/templates/indexSuccess.php"
+Aug 20 18:39:40 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/modules/dininghall/templates/_home.php"
+Aug 20 18:39:40 symfony [info] {sfPHPView} Decorate content with "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:40 symfony [info] {sfPHPView} Render "/home/cudining/andy2/apps/frontend/templates/layout.php"
+Aug 20 18:39:40 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_header.php"
+Aug 20 18:39:40 symfony [info] {sfPartialView} Render "/home/cudining/andy2/apps/frontend/templates/_footer.php"
+Aug 20 18:39:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 20 18:39:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Configuration 11.20 ms (10)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Factories 54.97 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Action "dininghall/index" 634.77 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} View "Success" for "dininghall/index" 12.61 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Partial "dininghall/_home" 0.46 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Partial "global/_header" 3.08 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebDebugLogger} Partial "global/_footer" 0.43 ms (1)
+Aug 20 18:39:40 symfony [info] {sfWebResponse} Send content (84972 o)
