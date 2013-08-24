@@ -8,7 +8,14 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
-
+	<style>
+	@media screen and (max-width: 480px)
+	{
+	.hide_mobile{
+	display:none;
+		}
+	}
+	</style>
   </head>
   <body>
     <div id="fb-root"></div>
