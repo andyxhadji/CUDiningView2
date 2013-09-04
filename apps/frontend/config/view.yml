@@ -12,7 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [bootstrap.css, bootstrap-responsive.css]
+#  stylesheets:    [bootstrap.css, bootstrap-responsive.css]
+  stylesheets:    [flatstrap.css, flatstrap.min.css, docs.css, flatstrap-responsive.css, flatstrap-responsive.min.css]
+
 
   javascripts:    [jquery.js, bootstrap.js]
 
