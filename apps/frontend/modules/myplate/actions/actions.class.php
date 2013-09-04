@@ -28,7 +28,7 @@ class myplateActions extends sfActions
   		{
   			$plate = NutritionQuery::create()->filterByFOODID($food)->findOne();
   			$_SESSION['myplate'][] = $plate;
-  			if ($plate->getCURRENT() == 1)
+  			if ($plate->getJAY() == 1 || $plate->getFER() == 1 || $plate->getJJP() == 1)
   			{
   				$_SESSION['myfoodnow'][] = $plate;
   			}
