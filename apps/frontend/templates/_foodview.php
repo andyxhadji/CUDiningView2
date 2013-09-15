@@ -5,7 +5,7 @@
 
 <a href="#<?php echo $food->getFOODID() ?><?php echo $type ?><?php echo $number ?>" role="button" class="btn" style="width:162px;
  margin-left:8px; margin-right:8px; margin-top: 8px"; data-toggle="modal">
- <img src=<?php echo $food->getUrl() ?>><br><?php echo $food->getDish() ?></a>
+ <img class="img-circle" src=<?php echo $food->getUrl() ?>><br><?php echo $food->getDish() ?></a>
 
  <div id="<?php echo $food->getFOODID() ?><?php echo $type ?><?php echo $number ?>"
    class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

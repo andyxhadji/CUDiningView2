@@ -13,7 +13,7 @@ default:
     #robots:       index, follow
 
 #  stylesheets:    [bootstrap.css, bootstrap-responsive.css]
-  stylesheets:    [flatstrap.css, flatstrap.min.css, docs.css, flatstrap-responsive.css, flatstrap-responsive.min.css]
+  stylesheets:    [flatstrap.css, flatstrap.min.css, docs.css, flatstrap-responsive.css, flatstrap-responsive.min.css, custom.css]
 
 
   javascripts:    [jquery.js, bootstrap.js]

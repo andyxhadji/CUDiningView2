@@ -1,0 +1,107 @@
+@media screen and (max-width: 480px)
+	{
+	.hide_mobile{
+	display:none;
+		}
+	}
+
+body {
+padding-top: 10px;
+background-image:url('http://andy.cudiningview.com/images/wood2.jpg');
+background-color:#cccccc;
+background-height: 100%;
+}
+
+.img-circle {
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+}
+
+.navbar-inner {
+	border: 0px;
+	background: black;
+	opacity: .75;
+}
+
+a{
+	font-weight: bold;
+	opacity: 1;
+}
+
+.well {
+	background: black;
+	opacity: .75;
+	border: 2px solid black;
+}
+
+.well .btn {
+	background: whitesmoke;
+	opacity: 1;
+}
+
+.credit {
+	color: white;
+}
+
+h1 {
+	color: white;
+}
+
+.hall-box {
+	background: black;
+	height: 100px;
+}
+
+.banner {
+	background: black;
+	opacity: .75;
+}
+
+.mission {
+	color: #CACACA;
+}
+
+._s0{
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.hall-container {
+text-align: center; 
+width: 200px;  
+margin-left: auto;
+margin-right: auto;
+opacity:.75;
+height:135px;
+background: black;
+color:#CACACA;
+}
+
+.hall-box {
+background: black; 
+font-size: 30px; 
+font-weight: bold;
+ height: 32px; 
+ padding-top: 8px; 
+}
+
+.hall-name {
+background: black; 
+font-size: 30px; 
+font-weight: bold;
+height: 32px;
+padding-top: 8px; 
+box-shadow: 0px 1px 1px #888888;
+}
+
+.navbar .btn-navbar {
+background-color:black;
+opacity:.75;
+}
+
+body > .navbar .brand {
+color: #CACACA;
+margin-left:0px;
+}
