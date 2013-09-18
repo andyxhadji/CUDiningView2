@@ -18,6 +18,18 @@
 	</style>
   </head>
   <body>
+   <script>
+	$(function() {
+	$('.row-fluid a').on('click', function() {
+    $('.well').css('opacity','1');
+	});
+	
+	$('.modal').on('hidden', function() {
+    $('.well').css('opacity','.75');
+	});
+	});
+
+	</script>
     <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
@@ -41,8 +53,10 @@
      js.src = "//connect.facebook.net/en_US/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-    </script>
-
+	
+	
+	</script>
+	
     <?php include_partial('global/header') ?>
 
     <?php echo $sf_content ?>
