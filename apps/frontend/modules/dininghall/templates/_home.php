@@ -9,7 +9,7 @@
 		  <p style="font-size: 18px; font-family: Trebuchet MS; text-align: center;"> 
 		  <span  style="font-size: 22px; font-weight: bold;">We think meals are the most important parts of the day. </span>
 		  This site is meant to help you make informed decisions about what you eat and avoid dining hall congestion while doing it.
-		  Vote for and subscribe to different foods, check nutrition facts, or geek out on our <a href="#">detailed statistics</a> page. 
+		  Subscribe to different foods, check nutrition facts, or plan your trip to the dining hall with our capacity data. 
 		  Let's make a better dining hall experience for everyone.</p>
 		  </div>
 		  <div class="span3" style="text-align: center; margin-left: auto; margin-right: auto; padding-bottom: 10px;"><fb:login-button show-faces="true" width="200" max-rows="1" ></fb:login-button></div>

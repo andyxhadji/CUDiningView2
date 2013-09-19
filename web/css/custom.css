@@ -3,10 +3,13 @@
 	.hide_mobile{
 	display:none;
 		}
+	.row-fluid .offset2{
+	margin-left:0;
 	}
+}
 
 body {
-padding-top: 10px;
+padding-top: 0px;
 background-image:url('http://andy.cudiningview.com/images/wood2.jpg');
 background-color:#cccccc;
 background-height: 100%;
@@ -104,4 +107,30 @@ opacity:.75;
 body > .navbar .brand {
 color: #CACACA;
 margin-left:0px;
+}
+
+.navbar .nav>li>a {
+color:#CACACA;
+}
+.navbar .nav>li>a:hover {
+color:#777777;
+}
+
+.credit {
+color:black;
+opacity: .75;
+}
+
+hr {
+background-color:black;
+opacity:.75;
+}
+
+.credit>a{
+color:#000000;
+font-weight: normal;
+}
+.credit>a:hover {
+color:#456285;
+text-decoration:none;
 }
