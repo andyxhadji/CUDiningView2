@@ -34,10 +34,19 @@ jjsplace:
     column:               FOOD_ID
     with_wildcard_routes: true
 
+all:
+  class: sfPropelORMRouteCollection
+  options:
+    model:                nutrition
+    module:               all
+    prefix_path:          /all
+    column:               FOOD_ID
+    with_wildcard_routes: true
+
 contact:
   url: /contact
   param: { module: contact, action: index }
-  
+
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 

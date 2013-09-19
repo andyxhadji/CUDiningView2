@@ -20,7 +20,7 @@
   <body>
    <script>
 	$(function() {
-	$('.row-fluid a').on('click', function() {
+	jQuery("[role='button']").on('click', function() {
     $('.well').css('opacity','1');
 	});
 	

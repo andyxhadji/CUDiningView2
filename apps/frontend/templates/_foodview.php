@@ -61,7 +61,7 @@
               </table>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
     <?php 
     $check = 0;
     foreach ($_SESSION['foods'] as $userFood)
@@ -72,9 +72,9 @@
       }
     }
     if ($check == 1): ?>
-    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn btn-primary" data-loading-text="Hold on...">Unsubscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Unsubscribe</button>
     <?php else: ?>
-    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn btn-primary" data-loading-text="Hold on...">Subscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Subscribe</button>
 <?php endif; ?>
   </div>
       </div>
