@@ -11,6 +11,15 @@ class dininghallActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    $count = ModelcountsQuery::create()
+    ->orderByCreatedAt('desc')
+    ->limit(3)
+    ->find();
+    $_SESSION['JayCount'] = $count[0]->getJAY() + $count[1]->getJAY() + $count[2]->getJAY();
+    $_SESSION['JJPCount'] = $count[0]->getJJP() + $count[1]->getJJP() + $count[2]->getJJP();
+    $_SESSION['FerCount'] = $count[0]->getFer() + $count[1]->getFer() + $count[2]->getFer();
+
+
 
 
     $_SESSION['facebook'] = new Facebook(array(
@@ -25,11 +34,11 @@ class dininghallActions extends sfActions
       try
       {
         $me = $_SESSION['facebook']->api('/me');
-        $user = UserQuery::create()->filterByUserId($userId)->findOne();
+        $user = UserQuery::create()->filterByUser($userId)->findOne();
         if (!$user)
         {
           $user = new User();
-          $user->setUserId($userId);
+          $user->setUser($userId);
           $user->setName($me['name']);
           $user->setGender($me['gender']);
           $user->save();

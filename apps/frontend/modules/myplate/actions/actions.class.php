@@ -19,7 +19,7 @@ class myplateActions extends sfActions
   {
   	$arr = $_SESSION['facebook']->getSignedRequest();
   	$userId = $arr['user_id'];
-  	$user = UserQuery::create()->filterByUserId($userId)->findOne();
+  	$user = UserQuery::create()->filterByUser($userId)->findOne();
   	if  ($user):
   		$_SESSION['foods'] = unserialize($user->getFood());
   		$_SESSION['myplate'] = array();

@@ -2,6 +2,7 @@
       <div class="container-fluid">
         <div class="row-fluid">
 		<h1 style="text-align: center;"><?php echo $hall ?> </h1>
+    <?php echo $count ?>
         	<div class="offset2">
                <div class="span9">
             	 <div class="well">

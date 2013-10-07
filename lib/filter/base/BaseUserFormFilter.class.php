@@ -16,7 +16,7 @@ abstract class BaseUserFormFilter extends BaseFormFilterPropel
       'Name'   => new sfWidgetFormFilterInput(),
       'Gender' => new sfWidgetFormFilterInput(),
       'Food'   => new sfWidgetFormFilterInput(),
-      'Visits' => new sfWidgetFormFilterInput(),
+      'Visits' => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
@@ -46,8 +46,8 @@ abstract class BaseUserFormFilter extends BaseFormFilterPropel
       'Name'   => 'Text',
       'Gender' => 'Text',
       'Food'   => 'Text',
-      'Visits' => 'Number',
       'id'     => 'Number',
+      'Visits' => 'Number',
     );
   }
 }
