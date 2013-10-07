@@ -6,50 +6,100 @@ propel:
     _attributes: { phpName: Countingdata, idMethod: native }
     HALL: { phpName: Hall, type: VARCHAR, size: '3', required: true }
     OCCUPANCY: { phpName: Occupancy, type: INTEGER, required: true }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
   modelcounts:
     _attributes: { phpName: Modelcounts, idMethod: native }
+    created_at: { phpName: CreatedAt, type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
     count_time: { phpName: CountTime, type: TIMESTAMP, primaryKey: true, required: true }
-    JAY: { phpName: Jay, type: INTEGER, required: false  }
-    JJP: { phpName: Jjp, type: INTEGER, required: false  }
-    FER: { phpName: Fer, type: INTEGER, required: false  }
+    JAY: { phpName: Jay, type: INTEGER, required: false }
+    JJP: { phpName: Jjp, type: INTEGER, required: false }
+    FER: { phpName: Fer, type: INTEGER, required: false }
   modelformula:
     _attributes: { phpName: Modelformula, idMethod: native }
     JAY: { phpName: Jay, type: DECIMAL, size: '8', scale: '6', required: true }
     FER: { phpName: Fer, type: DECIMAL, size: '8', scale: '6', required: true }
     JJP: { phpName: Jjp, type: DECIMAL, size: '8', scale: '6', required: true }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
   nutrition:
     _attributes: { phpName: Nutrition, idMethod: native }
     FOOD_ID: { phpName: FoodId, type: SMALLINT, primaryKey: true, required: true }
-    CURRENT: { phpName: Current, type: INTEGER, size: '1', required: false  }
+    CURRENT: { phpName: Current, type: INTEGER, size: '1', required: false }
     Dish: { phpName: Dish, type: VARCHAR, size: '50', required: false }
-    JAY: { phpName: Jay, type: INTEGER, size: '1', required: false  }
-    JJP: { phpName: Jjp, type: INTEGER, size: '1', required: false  }
-    FER: { phpName: Fer, type: INTEGER, size: '1', required: false  }
-    ServingSize: { phpName: Servingsize, type: VARCHAR, size: '20', required: false  }
-    Calories: { phpName: Calories, type: INTEGER, size: '5', required: false  }
-    TotalFat: { phpName: Totalfat, type: INTEGER, size: '5', required: false  }
-    Cholesterol: { phpName: Cholesterol, type: INTEGER, size: '5', required: false  }
-    SaturatedFat: { phpName: Saturatedfat, type: INTEGER, size: '5', required: false  }
-    Protein: { phpName: Protein, type: INTEGER, size: '5', required: false  }
-    Carbohydrate: { phpName: Carbohydrate, type: INTEGER, size: '5', required: false  }
-    Fiber: { phpName: Fiber, type: INTEGER, size: '5', required: false  }
-    Sodium: { phpName: Sodium, type: INTEGER, size: '5', required: false  }
-    Score: { phpName: Score, type: INTEGER, size: '5', required: false  }
-    Url: { phpName: Url, type: VARCHAR, size: '200', required: false  }
-    V: { phpName: V, type: INTEGER, size: '1', required: false  }
-    VN: { phpName: Vn, type: INTEGER, size: '1', required: false  }
-    GF: { phpName: Gf, type: INTEGER, size: '1', required: false  }
-    L: { phpName: L, type: INTEGER, size: '1', required: false  }
+    JAY: { phpName: Jay, type: INTEGER, size: '1', required: false }
+    JJP: { phpName: Jjp, type: INTEGER, size: '1', required: false }
+    FER: { phpName: Fer, type: INTEGER, size: '1', required: false }
+    ServingSize: { phpName: Servingsize, type: VARCHAR, size: '20', required: false }
+    Calories: { phpName: Calories, type: INTEGER, size: '5', required: false }
+    TotalFat: { phpName: Totalfat, type: INTEGER, size: '5', required: false }
+    Cholesterol: { phpName: Cholesterol, type: INTEGER, size: '5', required: false }
+    SaturatedFat: { phpName: Saturatedfat, type: INTEGER, size: '5', required: false }
+    Protein: { phpName: Protein, type: INTEGER, size: '5', required: false }
+    Carbohydrate: { phpName: Carbohydrate, type: INTEGER, size: '5', required: false }
+    Fiber: { phpName: Fiber, type: INTEGER, size: '5', required: false }
+    Sodium: { phpName: Sodium, type: INTEGER, size: '5', required: false }
+    Score: { phpName: Score, type: INTEGER, size: '5', required: false }
+    Url: { phpName: Url, type: VARCHAR, size: '200', required: false }
+    V: { phpName: V, type: INTEGER, size: '1', required: false }
+    VN: { phpName: Vn, type: INTEGER, size: '1', required: false }
+    GF: { phpName: Gf, type: INTEGER, size: '1', required: false }
+    L: { phpName: L, type: INTEGER, size: '1', required: false }
+  sf_guard_group:
+    _attributes: { phpName: SfGuardGroup, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '255', required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    _uniques: { sf_guard_group_U_1: [name] }
+  sf_guard_group_permission:
+    _attributes: { phpName: SfGuardGroupPermission, idMethod: native }
+    group_id: { phpName: GroupId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: CASCADE }
+    permission_id: { phpName: PermissionId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: CASCADE }
+    _indexes: { sf_guard_group_permission_FI_2: [permission_id] }
+  sf_guard_permission:
+    _attributes: { phpName: SfGuardPermission, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '255', required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    _uniques: { sf_guard_permission_U_1: [name] }
+  sf_guard_remember_key:
+    _attributes: { phpName: SfGuardRememberKey, idMethod: native }
+    user_id: { phpName: UserId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE }
+    remember_key: { phpName: RememberKey, type: VARCHAR, size: '32', required: false }
+    ip_address: { phpName: IpAddress, type: VARCHAR, size: '50', primaryKey: true, required: true }
+    created_at: { phpName: CreatedAt, type: TIMESTAMP, required: false }
+  sf_guard_user:
+    _attributes: { phpName: SfGuardUser, idMethod: native }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    username: { phpName: Username, type: VARCHAR, size: '128', required: true }
+    algorithm: { phpName: Algorithm, type: VARCHAR, size: '128', required: true, defaultValue: sha1 }
+    salt: { phpName: Salt, type: VARCHAR, size: '128', required: true }
+    password: { phpName: Password, type: VARCHAR, size: '128', required: true }
+    created_at: { phpName: CreatedAt, type: TIMESTAMP, required: false }
+    last_login: { phpName: LastLogin, type: TIMESTAMP, required: false }
+    is_active: { phpName: IsActive, type: BOOLEAN, size: '1', required: true, defaultValue: true }
+    is_super_admin: { phpName: IsSuperAdmin, type: BOOLEAN, size: '1', required: true, defaultValue: false }
+    _uniques: { sf_guard_user_U_1: [username] }
+  sf_guard_user_group:
+    _attributes: { phpName: SfGuardUserGroup, idMethod: native }
+    user_id: { phpName: UserId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE }
+    group_id: { phpName: GroupId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: CASCADE }
+    _indexes: { sf_guard_user_group_FI_2: [group_id] }
+  sf_guard_user_permission:
+    _attributes: { phpName: SfGuardUserPermission, idMethod: native }
+    user_id: { phpName: UserId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE }
+    permission_id: { phpName: PermissionId, type: INTEGER, primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: CASCADE }
+    _indexes: { sf_guard_user_permission_FI_2: [permission_id] }
   testdata:
     _attributes: { phpName: Testdata, idMethod: native }
     HALL: { phpName: Hall, type: VARCHAR, size: '30', required: true }
     TTIME: { phpName: Ttime, type: VARCHAR, size: '30', required: false }
     MTYPE: { phpName: Mtype, type: VARCHAR, size: '20', required: false }
     ENTR: { phpName: Entr, type: INTEGER, required: false }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
   user:
-    User: { phpName: UserId, type: VARCHAR, size: '50', required: true }
+    _attributes: { phpName: User, idMethod: native }
+    User: { phpName: User, type: VARCHAR, size: '50', required: true }
     Name: { phpName: Name, type: VARCHAR, size: '50', required: false }
     Gender: { phpName: Gender, type: VARCHAR, size: '10', required: false }
-    Food: { phpName: Food, type: VARCHAR, size: '50', required: false }
-    Visits: { phpName: Visits, type: INTEGER, size: '1000', required: false, default: 0 }
-
+    Food: { phpName: Food, type: VARCHAR, size: '1000', required: false }
+    id: { phpName: Id, type: INTEGER, primaryKey: true, autoIncrement: true, required: true }
+    Visits: { phpName: Visits, type: INTEGER, sqlType: 'int(11) unsigned', required: true, defaultValue: '0' }
