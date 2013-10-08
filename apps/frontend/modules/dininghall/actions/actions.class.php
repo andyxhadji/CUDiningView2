@@ -15,9 +15,9 @@ class dininghallActions extends sfActions
     ->orderByCreatedAt('desc')
     ->limit(3)
     ->find();
-    $_SESSION['JayCount'] = $count[0]->getJAY() + $count[1]->getJAY() + $count[2]->getJAY();
-    $_SESSION['JJPCount'] = $count[0]->getJJP() + $count[1]->getJJP() + $count[2]->getJJP();
-    $_SESSION['FerCount'] = $count[0]->getFer() + $count[1]->getFer() + $count[2]->getFer();
+    $_SESSION['JayCount'] = (($count[0]->getJAY() + $count[1]->getJAY() + $count[2]->getJAY())/500)*100;
+    $_SESSION['JJPCount'] = (($count[0]->getJJP() + $count[1]->getJJP() + $count[2]->getJJP())/200)*100;
+    $_SESSION['FerCount'] = (($count[0]->getFer() + $count[1]->getFer() + $count[2]->getFer())/300)*300;
 
 
 
