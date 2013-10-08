@@ -2,7 +2,6 @@
       <div class="container-fluid">
         <div class="row-fluid">
 		<h1 style="text-align: center;"><?php echo $hall ?> </h1>
-    <?php echo $count ?>
         	<div class="offset2">
                <div class="span9">
             	 <div class="well">
@@ -10,17 +9,11 @@
                 <div class="row-fluid">
                   <div class="span8 offset2">
          			      <div class="progress progress-success">
-                    	<div class="bar" style="width: 30%">
+                    	<div class="bar" style="width:<?php echo $count ?>%">
                         </div>
                     </div>
                   </div>
                 </div>
-                <div class="row-fluid">
-                  <div class="alert">
-                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                      <strong>Under Construction</strong> Real-time occupancy coming soon! ^ ^ ^
-                    </div>
-                  </div>
                   <?php endif; ?>
 
 <?php if(!$foods[0]) { ?>
