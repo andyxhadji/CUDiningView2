@@ -59,7 +59,7 @@ class dininghallActions extends sfActions
   {
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
-    $user = UserQuery::create()->filterByUserId($userId)->find();
+    $user = UserQuery::create()->filterByUser($userId)->find();
     $foods = $user[0]->getFood();
     $foods = unserialize($foods);
     $counter = 0;
