@@ -11,6 +11,13 @@ class ferrisActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    $count = ModelcountsQuery::create()
+    ->orderByCreatedAt('desc')
+    ->limit(3)
+    ->find();
+
+    $_SESSION['FerCount'] = (($count[0]->getFer() + $count[1]->getFer() + $count[2]->getFer())/300)*100;
+
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
     $user = UserQuery::create()->filterByUser($userId)->findOne();
