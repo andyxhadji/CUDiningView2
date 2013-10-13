@@ -11,6 +11,13 @@ class johnjayActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    $count = ModelcountsQuery::create()
+    ->orderByCreatedAt('desc')
+    ->limit(3)
+    ->find();
+    $_SESSION['JayCount'] = (($count[0]->getJAY() + $count[1]->getJAY() + $count[2]->getJAY())/500)*100;
+
+
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
     $user = UserQuery::create()->filterByUser($userId)->findOne();
