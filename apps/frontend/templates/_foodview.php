@@ -72,9 +72,9 @@
       }
     }
     if ($check == 1): ?>
-    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Unsubscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Remove from My Plate</button>
     <?php else: ?>
-    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Subscribe</button>
+    <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Add to My Plate</button>
 <?php endif; ?>
   </div>
       </div>
@@ -84,13 +84,13 @@
 <script type="text/javascript">
 function subscribe(food, number) {
     $.get("/dininghall/subscribe?id=" + food);
-    if (document.getElementById('food' + food + number).innerHTML == 'Unsubscribe')
+    if (document.getElementById('food' + food + number).innerHTML == 'Remove from My Plate')
     {
-      document.getElementById('food' + food + number).innerHTML = 'Subscribe';
+      document.getElementById('food' + food + number).innerHTML = 'Add to My Plate';
     }
     else
     {
-      document.getElementById('food' + food + number).innerHTML = 'Unsubscribe';
+      document.getElementById('food' + food + number).innerHTML = 'Remove from My Plate';
     }
     return false;
 }
