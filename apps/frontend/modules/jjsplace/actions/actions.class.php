@@ -16,6 +16,8 @@ class jjsplaceActions extends sfActions
     ->limit(3)
     ->find();
     $_SESSION['JJPCount'] = (($count[0]->getJJP() + $count[1]->getJJP() + $count[2]->getJJP())/200)*100;
+    if($_SESSION['JJPCount']>93)
+      $_SESSION['JJPCount']=93;
 
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];

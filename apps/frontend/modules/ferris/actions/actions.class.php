@@ -17,6 +17,8 @@ class ferrisActions extends sfActions
     ->find();
 
     $_SESSION['FerCount'] = (($count[0]->getFer() + $count[1]->getFer() + $count[2]->getFer())/300)*100;
+    if($_SESSION['FerCount']>93)
+      $_SESSION['FerCount']=93;
 
     $arr = $_SESSION['facebook']->getSignedRequest();
     $userId = $arr['user_id'];
