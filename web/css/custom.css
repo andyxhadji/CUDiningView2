@@ -53,7 +53,7 @@ h1 {
 
 .hall-box {
 	background: black;
-	height: 100px;
+	height: 200px;
 }
 
 .banner {
@@ -77,7 +77,7 @@ width: 200px;
 margin-left: auto;
 margin-right: auto;
 opacity:.75;
-height:135px;
+height:215px;
 background: black;
 color:#CACACA;
 }
@@ -133,4 +133,16 @@ font-weight: normal;
 .credit>a:hover {
 color:#456285;
 text-decoration:none;
+}
+
+.statusStates{
+	color:#000000;
+	padding-left:5px;
+	padding-right:5px;
+	font-weight:bold;
+}
+
+.placeTitle{
+	color:#000000;
+	opacity:.75;
 }

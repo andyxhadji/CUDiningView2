@@ -1,16 +1,17 @@
   <div class="tab-pane" id="hall">
       <div class="container-fluid">
         <div class="row-fluid">
-		<h1 style="text-align: center;"><?php echo $hall ?> </h1>
+		<h1 class="placeTitle" style="text-align: center;"><?php echo $hall ?> </h1>
         	<div class="offset2">
                <div class="span9">
             	 <div class="well">
                 <?php if (!$me): ?>
                 <div class="row-fluid">
                   <div class="span8 offset2">
-         			      <div class="progress progress-success">
-                    	<div class="bar" style="width:<?php echo $count ?>%">
-                        </div>
+         			      <div class="progress">
+                      <div class="statusStates" style="position:absolute;">Empty</div> 
+                      <div class="statusStates" style="float:right;">Full</div>
+                    	<div class="bar" style="z-index:1; width:<?php echo $count ?>%"></div>
                     </div>
                   </div>
                 </div>

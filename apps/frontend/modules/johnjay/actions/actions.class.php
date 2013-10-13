@@ -16,6 +16,8 @@ class johnjayActions extends sfActions
     ->limit(3)
     ->find();
     $_SESSION['JayCount'] = (($count[0]->getJAY() + $count[1]->getJAY() + $count[2]->getJAY())/500)*100;
+    if($_SESSION['JayCount']>93)
+      $_SESSION['JayCount']=93;
 
 
     $arr = $_SESSION['facebook']->getSignedRequest();
