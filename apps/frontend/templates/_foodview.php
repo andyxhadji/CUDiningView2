@@ -61,8 +61,12 @@
               </table>
   </div>
   <div class="modal-footer">
-    <button class="btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
-    <?php 
+    <?php
+    $arr = $_SESSION['facebook']->getSignedRequest();
+    $userId = $arr['user_id'];
+    if ($userId && $_SESSION['facebook']->getUser()){ ?>
+      <button class="btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
+<?php
     $check = 0;
     foreach ($_SESSION['foods'] as $userFood)
     {
@@ -75,7 +79,18 @@
     <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID() ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Remove from My Plate</button>
     <?php else: ?>
     <button id="food<?php echo $food->getFOODID(); echo $number ?>" type="button" onclick="subscribe(<?php echo $food->getFOODID(); ?>, <?php echo $number ?>)" class="btn-inverse" data-loading-text="Hold on...">Add to My Plate</button>
-<?php endif; ?>
+<?php endif; }
+  else{ ?>
+  <button style="margin-top: -17px" class="btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
+
+   <span>
+  <fb:login-button size="large" show-faces="false" width="200" max-rows="1" ></fb:login-button>
+</span>
+  <?php
+ 
+ }
+
+ ?>
   </div>
       </div>
 
