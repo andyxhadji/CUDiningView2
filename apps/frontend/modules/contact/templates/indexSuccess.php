@@ -1,8 +1,8 @@
   <div class="tab-pane" id="hall">
+	<h1 class="placeTitle" style="text-align: center;">Contact Us! </h1>
       <div class="container-fluid">
         <div class="row-fluid">
         	<div class="offset2">
-              <h1 class="offset3" style="color: black; opacity: .75;">Contact Us!</h1>
                <div class="span9">
             	 <div class="well" style="color: white;">
             	 	Our site is built by Columbia students for Columbia students. We want to hear from you!
