@@ -84,11 +84,8 @@
   <button style="margin-top: -17px" class="btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
 
    <span>
-   <div style="background: black; color: white; width: 60px; margin-top: -17px;">
-  <fb:login-button size="large" show-faces="false" width="200" max-rows="1" ></fb:login-button>
-  to track. 
-   </div>
-</span>
+  <fb:login-button size="large" show-faces="false" width="200" max-rows="1" >Add to My Plate</fb:login-button>
+	</span>
   <?php
  
  }
