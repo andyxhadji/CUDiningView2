@@ -22,6 +22,11 @@
 			<div class="hall-container" align="center">
 			<div class='hall-box'> 
 			<p class="hall-name">John Jay</p>	
+						<div style="margin-left: 10px; margin-right: 10px" class="progress">
+
+			           	<div class="bar" style="z-index:1; width:<?php echo $_SESSION['JayCount'] ?>%"></div>
+			           </div>
+
 			<p style="font-size: 12px;">Sunday: 10:00am to 2:00pm and 5:00pm to 8:00pm </p>
 			<p style="font-size: 12px; padding-bottom: 5px;">Monday - Thursday: 11:00am to 2:00pm and 5:00pm to 8:00pm</p>
 			<a href="/johnjay" class="btn btn-primary">More Info</a>
@@ -33,6 +38,10 @@
 			<div class="hall-container" align="center">
 			<div class='hall-box'> 
 			<p class="hall-name">Ferris</p>	
+						<div style="margin-left: 10px; margin-right: 10px"  class="progress">
+
+			           	<div class="bar" style="z-index:1; width:<?php echo $_SESSION['FerCount'] ?>%"></div>
+			           </div>
 			<p style="font-size: 12px; padding-bottom: 5px;">Monday - Friday: 8:00am to 8:00pm </p>
 			<p style="font-size: 12px; padding-bottom: 5px;">Saturday: 10:30am to 2:00pm and 5:00pm to 8:00pm</p>
 			<a href="/ferris" class="btn btn-primary">More Info</a>
@@ -44,6 +53,10 @@
 			<div class="hall-container" align="center">
 			<div class='hall-box'> 
 			<p class="hall-name">JJs</p>	
+						<div style="margin-left: 10px; margin-right: 10px"  class="progress">
+
+			           	<div class="bar" style="z-index:1; width:<?php echo $_SESSION['JJPCount'] ?>%"></div>
+			           </div>
 			<p style="font-size: 12px; padding-bottom: 5px;">Sunday-Thursday: 12:00pm to 1:00am </p>
 			<p style="font-size: 12px; padding-bottom: 5px;">Friday & Saturday: 12:00pm to 8:00pm</p>
 			<a href="/jjsplace" class="btn btn-primary">More Info</a>
