@@ -19,6 +19,7 @@ background-height: 100%;
 	-webkit-border-radius: 50em;
 	-moz-border-radius: 50em;
 	border-radius: 50em;
+	max-width:50%;
 }
 
 .navbar-inner {
