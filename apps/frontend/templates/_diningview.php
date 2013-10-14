@@ -23,7 +23,7 @@
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4>CU Dining View</h4>
   <? if ($me): ?>
-  You haven't subscribed to any foods yet!
+  You haven't added any food to your plate! Log in to Facebook to activate this feature!
 <? else: ?>
   CU has not released info for the next meal yet!
 <? endif; ?>
