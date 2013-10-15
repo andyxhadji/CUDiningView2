@@ -7,7 +7,8 @@
             	 <div class="well" style="color: white;">
             	 	Our site is built by Columbia students for Columbia students. We want to hear from you!
 
-Send us bug reports, suggestions, criticisms, and compliments at support@CUDiningView.com!
+Send us bug reports, suggestions, criticisms, and compliments at 
+ahh2131@columbia.edu!
 </div>
 </div>
 </div>
